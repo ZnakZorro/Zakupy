@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Todolist</title>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('.check img').click(function(){
+                if ( $(this).attr("src") == "unchecked.png" ) {
+                    $(this).attr("src", "checked.png");
+                    $(this).parent().next().next().find('input').addClass('done');
+                } else {
+                    $(this).attr("src", "unchecked.png");
+                    $(this).parent().next().next().find('input').removeClass('done');
+                }
+            });
+        })
+    </script>
+    <style>
+        body {
+            background: #fff url('retina_wood.png') top right repeat;
+            margin: 0;
+            padding: 0;
+        }
+        #main {
+            background: #0099cc;
+            margin-top: 0;
+            padding: 2px 0 4px 0;
+            text-align: center;
+        }
+        #main a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+            font-family: Arial;
+        }
+        #main a:hover {
+            text-decoration: underline;
+        }
+        #container {
+            background: #fff;
+            width: 400px;
+            margin: 0 auto;
+            margin-top: 150px;
+            text-align: center;
+            -moz-box-shadow:    0px 0px 5px 3px #c3c3c3;
+            -webkit-box-shadow: 0px 0px 5px 3px #c3c3c3;
+            box-shadow:         0px 0px 5px 3px #c3c3c3;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px; 
+        }
+        .header {
+            background: #0066cc;
+            padding: 10px;
+            font-size: 24px;
+            color: #fff;
+            font-family: Arial;
+            font-weight: bold;
+            -moz-border-radius: 10px 10px 0 0;
+            -webkit-border-radius: 10px 10px 0 0;
+            border-radius: 10px 10px 0 0;
+            background: #499bea; /* Old browsers */
+            text-shadow: -1px -1px 1px #666;
+            background: -moz-linear-gradient(top,  #499bea 0%, #207ce5 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#499bea), color-stop(100%,#207ce5)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #499bea 0%,#207ce5 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #499bea 0%,#207ce5 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #499bea 0%,#207ce5 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #499bea 0%,#207ce5 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5',GradientType=0 ); /* IE6-9 */
+        }
+        .check {
+            float: left;
+            margin-right: 1px;
+            padding: 10px 15px;
+            height: 25px;
+            border-right: 1px solid #ff0000;
+            border-top: 1px solid #d9d9d9;
+        }
+        .check img {
+            position: relative;
+            top: 4px;
+        }
+        .check img:hover {
+            cursor: pointer;
+        }
+        .divider {
+            float: left;
+            height: 25px;
+        }
+        .text {
+            height: 25px;
+            float: left;
+            border-left: 1px solid #ff0000;
+            padding: 10px;
+            border-top: 1px solid #d9d9d9;
+            width: 82.6%;
+        }
+        .clear {
+            clear: both;
+        }
+        input[type="text"] {
+            font-family: "Times New Roman";
+            border: none;
+            width: 100%;
+            font-size: 18px;
+            height: 24px;
+            color:#333;
+            outline: none;
+        }
+        .done {
+            font-style: italic;
+            text-decoration: line-through;
+            color: #d3d3d3 !important;
+        }
+    </style>
+</head>
+<body>    
+    <div id="container">
+        <div class="header">
+            :: todolist ::
+        </div>
+        <div class="row">
+            <div class="check"><img src="unchecked.png"/></div>
+            <div class="divider"></div>
+            <div class="text"><input type="text"/></div>
+            <div class="clear"></div>
+        </div>
+        <div class="row">
+            <div class="check"><img src="unchecked.png"/></div>
+            <div class="divider"></div>
+            <div class="text"><input type="text"/></div>
+            <div class="clear"></div>
+        </div>
+        <div class="row">
+            <div class="check"><img src="unchecked.png"/></div>
+            <div class="divider"></div>
+            <div class="text"><input type="text"/></div>
+            <div class="clear"></div>
+        </div>
+        <div class="row">
+            <div class="check"><img src="unchecked.png"/></div>
+            <div class="divider"></div>
+            <div class="text"><input type="text"/></div>
+            <div class="clear"></div>
+        </div>
+        <div class="row">
+            <div class="check"><img src="unchecked.png"/></div>
+            <div class="divider"></div>
+            <div class="text"><input type="text"/></div>
+            <div class="clear"></div>
+        </div>
+        <div class="row">
+            <div class="check"><img src="unchecked.png"/></div>
+            <div class="divider"></div>
+            <div class="text"><input type="text"/></div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+</html>
