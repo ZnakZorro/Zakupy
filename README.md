@@ -1,4 +1,4 @@
-SzukajIle
+Lista zakupów
 =========
 
-Szukaj ile razy w google
+Zapisz co masz kupić
